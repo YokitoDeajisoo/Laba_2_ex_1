@@ -1,14 +1,17 @@
-﻿#include <stdio.h>
-
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h>
 int main() {
+    // Налаштування локалі для підтримки української мови
+    setlocale(LC_ALL, "Ukrainian");
     double num1, num2;
 
     // Введення даних
     printf("Enter the first real number: ");
-    scanf_s("%lf", &num1); // Виправлено: додано &
+    scanf("%lf", &num1); // Виправлено: додано &
 
     printf("Enter the second real number: ");
-    scanf_s("%lf", &num2); // Виправлено: додано &
+    scanf("%lf", &num2); // Виправлено: додано &
 
     // Обчислення
     double difference = num2 - num1;
